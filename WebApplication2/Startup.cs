@@ -98,7 +98,6 @@ namespace WebApplication2
             services.AddIdentityCore<User>()
                .AddEntityFrameworkStores<DataContext>()
                .AddSignInManager<SignInManager<User>>();
-            services.AddAuthentication();
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["SecretTokenKey"]));
 
